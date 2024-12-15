@@ -27,3 +27,5 @@ add_library( mecab_dart
     ../ios/Classes/tagger.cpp
     ../ios/Classes/writer.cpp
 )
+
+target_compile_features(mecab_dart PRIVATE cxx_std_14)
