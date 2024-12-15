@@ -1,12 +1,16 @@
 cmake_minimum_required(VERSION 3.4.1)  # for example
 
+# C++14を指定
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
 add_library( mecab_dart
 
     # Sets the library as a shared library.
     SHARED
 
     # Provides a relative path to your source file(s).
-    ../ios/Classes/char_property.cpp 
+    ../ios/Classes/char_property.cpp
     ../ios/Classes/eval.cpp
     ../ios/Classes/nbest_generator.cpp
     ../ios/Classes/tokenizer.cpp
