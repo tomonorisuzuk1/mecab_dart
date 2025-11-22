@@ -27,6 +27,10 @@ apply plugin: 'kotlin-android'
 android {
     compileSdkVersion 33
 
+    // NDK r28を指定（16KBページサイズ対応のため）
+    // 参考: Google Play 16KB ページサイズ対応要件（Android 15+）
+    ndkVersion "28.0.12433566"
+
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
@@ -37,7 +41,7 @@ android {
     lintOptions {
         disable 'InvalidPackage'
     }
-    
+
     externalNativeBuild {
         cmake {
            path "CMakeLists.txt"
